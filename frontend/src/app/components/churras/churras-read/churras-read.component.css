@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+}
+.edit{
+    margin-right: 5px;
+}
+
+.edit > i{
+    color: rgb(252, 216, 9);
+}
+
+.delete > i {
+    color: rgb(214, 0, 0);
+}
+
+.title-financeiro {
+  margin-bottom: 15px;
+}
+
+.table-financeiro > tr {
+    text-align: center;
+}

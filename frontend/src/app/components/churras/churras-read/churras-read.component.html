@@ -1,0 +1,70 @@
+<div class="mat-elevation-z3">
+  <mat-card>
+    <mat-card-title> Participantes </mat-card-title>
+    <table mat-table [dataSource]="participantesList">
+
+      <!-- nome Column -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome do Funcionário</th>
+        <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+      </ng-container>
+      <!-- beber Column -->
+      <ng-container matColumnDef="beber">
+        <th mat-header-cell *matHeaderCellDef>Consumir Bebida?</th>
+        <td mat-cell *matCellDef="let row">{{row.beber}}</td>
+      </ng-container>
+      <!-- acompanhante Column -->
+      <ng-container matColumnDef="acompanhante">
+        <th mat-header-cell *matHeaderCellDef>Levar Convidado?</th>
+        <td mat-cell *matCellDef="let row">{{row.acompanhante}}</td>
+      </ng-container>
+      <!-- nomeAcompanhante Column -->
+      <ng-container matColumnDef="nomeAcompanhante">
+        <th mat-header-cell *matHeaderCellDef>Nome do Convidado</th>
+        <td mat-cell *matCellDef="let row">{{row.nomeAcompanhante}}</td>
+      </ng-container>
+      <!-- beberAcompanhante Column -->
+      <ng-container matColumnDef="beberAcompanhante">
+        <th mat-header-cell *matHeaderCellDef>Consumir Bebida?</th>
+        <td mat-cell *matCellDef="let row">{{row.beberAcompanhante}}</td>
+      </ng-container>
+      <!-- action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let row">
+          <a routerLink="/churras/update/{{ row.id }}" class="edit">
+            <i class="material-icons">
+              edit
+            </i>
+          </a>
+          <a routerLink="/churras/delete/{{ row.id }}" class="delete">
+            <i class="material-icons">
+              delete
+            </i>
+          </a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title class="title-financeiro">Financeiro</mat-card-title>
+    <table class="table-financeiro">
+      <ng-container>
+        <tr>
+          <td>Arrecadação com Funcionários</td>
+          <td>Arrecadação com Convidados</td>
+          <td>Arrecadação Total</td>
+        </tr>
+        <tr>
+          <td>{{arecadacao.arrecadacaoFuncionario}}</td>
+          <td>{{arecadacao.arrecadacaoAcompanhante}}</td>
+          <td>{{arecadacao.arrecadacaoTotal}}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </mat-card>
+</div>

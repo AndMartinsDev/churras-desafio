@@ -1,0 +1,41 @@
+<mat-card>
+    <mat-card-title> Alteração de Participante</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome do Funcionário" [(ngModel)]="funcionario.nome" name="nome" required>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-select placeholder="Consumir Bebida?" [(ngModel)]="funcionario.beber" name="beber" required>
+                <mat-option value="Sim">Sim</mat-option>
+                <mat-option value="Não">Não</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-select placeholder="Levar Convidado?" [(ngModel)]="funcionario.acompanhante" name="acompanhante">
+                <mat-option value="Sim">Sim</mat-option>
+                <mat-option value="Não">Não</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nome do Convidado" [(ngModel)]="funcionario.nomeAcompanhante"
+                name="nomeAcompanhante">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Consumir Bebida?" [(ngModel)]="funcionario.beberAcompanhante"
+                name="beberAcompanhante">
+                <mat-option value="Sim">Sim</mat-option>
+                <mat-option value="Não">Não</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateChurras()" color="accent">
+        Atualizar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Voltar
+    </button>
+</mat-card>

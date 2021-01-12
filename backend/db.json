@@ -1,0 +1,28 @@
+{
+  "funcionarios": [
+    {
+      "nome": "Bill Gates",
+      "beber": "Não",
+      "acompanhante": "Não",
+      "nomeAcompanhante": "Ronald McDonald",
+      "beberAcompanhante": "Sim",
+      "id": 2
+    },
+    {
+      "nome": "Jeff Bezos",
+      "beber": "Não",
+      "acompanhante": "Sim",
+      "nomeAcompanhante": "Dany Bananinha",
+      "beberAcompanhante": "Sim",
+      "id": 3
+    },
+    {
+      "nome": "Jaiminho Carteiro",
+      "beber": "Não",
+      "acompanhante": "Sim",
+      "nomeAcompanhante": "Chaves",
+      "beberAcompanhante": "Não",
+      "id": 4
+    }
+  ]
+}
